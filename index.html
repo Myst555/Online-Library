@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LibraryHub</title>
+    <meta
+      name="description"
+      content="LibraryHub is a modern online library UI with landing, login, and dashboard views."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar panel">
+        <button class="brand" type="button" data-view-target="landing" aria-label="Go to home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M6 5.25A1.25 1.25 0 0 1 7.25 4H12a4 4 0 0 1 4 4v11a.75.75 0 0 1-1.25.56l-1.55-1.39a3 3 0 0 0-2-.77H7.25A1.25 1.25 0 0 1 6 16.75v-11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+              <path d="M18 5.25c0-.69-.56-1.25-1.25-1.25H12a4 4 0 0 0-4 4v11a.75.75 0 0 0 1.25.56l1.55-1.39a3 3 0 0 1 2-.77h5.95A1.25 1.25 0 0 0 18 16.75v-11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+            </svg>
+          </span>
+          <span>LibraryHub</span>
+        </button>
+
+        <nav class="topbar-actions" aria-label="Primary actions">
+          <button class="ghost-button" type="button" data-view-target="landing">Home</button>
+          <button class="ghost-button" type="button" data-view-target="login">Login</button>
+          <button class="primary-button primary-button--compact" type="button" data-view-target="dashboard">
+            Dashboard
+          </button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="view view--active" data-view="landing" aria-labelledby="landing-title">
+          <section class="hero panel">
+            <p class="eyebrow">Digital Library Platform</p>
+            <h1 id="landing-title">Welcome to LibraryHub</h1>
+            <p class="lead">
+              Your digital gateway to thousands of books, journals, and resources. Access our
+              collection anytime, anywhere.
+            </p>
+
+            <div class="hero-actions">
+              <button class="primary-button" type="button" data-view-target="login">Get Started</button>
+              <button class="secondary-button" type="button" data-view-target="dashboard">
+                Browse Catalog
+              </button>
+            </div>
+
+            <div class="hero-stats" aria-label="Platform highlights">
+              <div class="stat-pill">
+                <strong>50k+</strong>
+                <span>Books cataloged</span>
+              </div>
+              <div class="stat-pill">
+                <strong>24/7</strong>
+                <span>Always available</span>
+              </div>
+              <div class="stat-pill">
+                <strong>120</strong>
+                <span>Reading clubs</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="feature-grid" aria-label="Library features">
+            <article class="feature-card panel">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6 5.5A2.5 2.5 0 0 1 8.5 3H19v14.5H8.5A2.5 2.5 0 0 0 6 20" stroke="currentColor" stroke-width="1.8"></path>
+                  <path d="M6 5.5A2.5 2.5 0 0 0 3.5 8V20" stroke="currentColor" stroke-width="1.8"></path>
+                </svg>
+              </div>
+              <h2>Vast Collection</h2>
+              <p>Access over 50,000 books and digital resources across every genre and subject.</p>
+            </article>
+
+            <article class="feature-card panel">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="10.5" cy="10.5" r="5.5" stroke="currentColor" stroke-width="1.8"></circle>
+                  <path d="M15 15l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <h2>Advanced Search</h2>
+              <p>Find exactly what you need with powerful filters for authors, ISBN, and availability.</p>
+            </article>
+
+            <article class="feature-card panel">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M16.5 20v-1.25A4.75 4.75 0 0 0 11.75 14H6.25A4.75 4.75 0 0 0 1.5 18.75V20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                  <circle cx="9" cy="7" r="3.5" stroke="currentColor" stroke-width="1.8"></circle>
+                  <path d="M20 20v-1.5A3.5 3.5 0 0 0 16.5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <h2>Community</h2>
+              <p>Join reading clubs, share reviews, and connect with fellow readers across the platform.</p>
+            </article>
+          </section>
+        </section>
+
+        <section class="view" data-view="login" aria-labelledby="login-title">
+          <div class="auth-layout">
+            <section class="auth-card panel">
+              <div class="auth-logo" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6 5.25A1.25 1.25 0 0 1 7.25 4H12a4 4 0 0 1 4 4v11a.75.75 0 0 1-1.25.56l-1.55-1.39a3 3 0 0 0-2-.77H7.25A1.25 1.25 0 0 1 6 16.75v-11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+                  <path d="M18 5.25c0-.69-.56-1.25-1.25-1.25H12a4 4 0 0 0-4 4v11a.75.75 0 0 0 1.25.56l1.55-1.39a3 3 0 0 1 2-.77h5.95A1.25 1.25 0 0 0 18 16.75v-11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+
+              <h1 id="login-title">Login to LibraryHub</h1>
+              <p class="lead auth-lead">Enter your credentials to access your library account.</p>
+
+              <form class="auth-form">
+                <label>
+                  <span>Email</span>
+                  <input type="email" placeholder="your.email@example.com" />
+                </label>
+                <label>
+                  <span>Password</span>
+                  <input type="password" placeholder="Enter your password" />
+                </label>
+
+                <div class="auth-meta">
+                  <label class="checkbox-row">
+                    <input type="checkbox" checked />
+                    <span>Remember me</span>
+                  </label>
+                  <button class="link-button" type="button">Forgot password?</button>
+                </div>
+
+                <button class="primary-button primary-button--full" type="button" data-view-target="dashboard">
+                  Sign In
+                </button>
+              </form>
+
+              <p class="auth-switch">
+                Don&apos;t have an account? <button class="link-button" type="button">Sign up</button>
+              </p>
+
+              <button class="secondary-button secondary-button--full" type="button" data-view-target="landing">
+                Back to Home
+              </button>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" data-view="dashboard" aria-labelledby="dashboard-title">
+          <header class="dashboard-topbar panel">
+            <button class="brand" type="button" data-view-target="landing" aria-label="Go to home">
+              <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6 5.25A1.25 1.25 0 0 1 7.25 4H12a4 4 0 0 1 4 4v11a.75.75 0 0 1-1.25.56l-1.55-1.39a3 3 0 0 0-2-.77H7.25A1.25 1.25 0 0 1 6 16.75v-11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+                  <path d="M18 5.25c0-.69-.56-1.25-1.25-1.25H12a4 4 0 0 0-4 4v11a.75.75 0 0 0 1.25.56l1.55-1.39a3 3 0 0 1 2-.77h5.95A1.25 1.25 0 0 0 18 16.75v-11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <span>LibraryHub</span>
+            </button>
+
+            <div class="dashboard-icons" aria-label="Dashboard utilities">
+              <button class="icon-button" type="button" aria-label="Notifications">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M14 18a2 2 0 1 1-4 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M6.5 17h11l-1.2-1.8V11a4.3 4.3 0 0 0-8.6 0v4.2L6.5 17Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+              </button>
+              <button class="icon-button" type="button" aria-label="Settings">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.8"></circle><path d="M19 12l1.5-.8-1.4-2.5-1.7.3a6.8 6.8 0 0 0-1.1-1.1l.3-1.7-2.5-1.4L12 4l-.8 1.5-2.5 1.4.3 1.7a6.8 6.8 0 0 0-1.1 1.1l-1.7-.3-1.4 2.5L5 12l-1.5.8 1.4 2.5 1.7-.3a6.8 6.8 0 0 0 1.1 1.1l-.3 1.7 2.5 1.4L12 20l.8-1.5 2.5-1.4-.3-1.7a6.8 6.8 0 0 0 1.1-1.1l1.7.3 1.4-2.5L19 12Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"></path></svg>
+              </button>
+              <button class="icon-button" type="button" aria-label="Logout" data-view-target="landing">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M10 5H5.75A1.75 1.75 0 0 0 4 6.75v10.5A1.75 1.75 0 0 0 5.75 19H10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M14 8l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M18 12H9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
+              </button>
+            </div>
+          </header>
+
+          <section class="dashboard-content">
+            <div class="dashboard-intro">
+              <h1 id="dashboard-title">Welcome back, Reader!</h1>
+              <p>Manage your library and discover new books.</p>
+            </div>
+
+            <label class="searchbar panel">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="10.5" cy="10.5" r="5.5" stroke="currentColor" stroke-width="1.8"></circle>
+                <path d="M15 15l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+              </svg>
+              <input type="search" placeholder="Search books, authors, or ISBN..." />
+            </label>
+
+            <section class="stats-grid" aria-label="Reading stats">
+              <article class="stat-card panel stat-card--blue">
+                <div class="stat-card-head">
+                  <h2>Borrowed</h2>
+                  <span class="stat-dot"></span>
+                </div>
+                <strong>3</strong>
+                <p>Active loans</p>
+              </article>
+              <article class="stat-card panel stat-card--red">
+                <div class="stat-card-head">
+                  <h2>Overdue</h2>
+                  <span class="stat-dot"></span>
+                </div>
+                <strong>1</strong>
+                <p>Needs attention</p>
+              </article>
+              <article class="stat-card panel stat-card--amber">
+                <div class="stat-card-head">
+                  <h2>Favorites</h2>
+                  <span class="stat-dot"></span>
+                </div>
+                <strong>24</strong>
+                <p>Saved books</p>
+              </article>
+              <article class="stat-card panel stat-card--green">
+                <div class="stat-card-head">
+                  <h2>Read</h2>
+                  <span class="stat-dot"></span>
+                </div>
+                <strong>47</strong>
+                <p>This year</p>
+              </article>
+            </section>
+
+            <section class="dashboard-grid">
+              <article class="dashboard-panel panel">
+                <div class="panel-heading">
+                  <h2>Currently Borrowed</h2>
+                  <p>Manage your active loans</p>
+                </div>
+
+                <div class="book-list">
+                  <article class="book-row">
+                    <div>
+                      <h3>The Great Gatsby</h3>
+                      <p>F. Scott Fitzgerald</p>
+                      <span class="due-date">Due: May 15, 2026</span>
+                    </div>
+                    <button class="secondary-button" type="button">Renew</button>
+                  </article>
+
+                  <article class="book-row">
+                    <div>
+                      <h3>To Kill a Mockingbird</h3>
+                      <p>Harper Lee</p>
+                      <span class="due-date">Due: May 22, 2026</span>
+                    </div>
+                    <button class="secondary-button" type="button">Renew</button>
+                  </article>
+                </div>
+              </article>
+
+              <article class="dashboard-panel panel">
+                <div class="panel-heading">
+                  <h2>Recommended for You</h2>
+                  <p>Based on your reading history</p>
+                </div>
+
+                <div class="book-list">
+                  <article class="book-row">
+                    <div>
+                      <h3>Brave New World</h3>
+                      <p>Aldous Huxley</p>
+                      <span class="rating">★ 4.5</span>
+                    </div>
+                    <button class="primary-button primary-button--compact" type="button">Reserve</button>
+                  </article>
+
+                  <article class="book-row">
+                    <div>
+                      <h3>The Catcher in the Rye</h3>
+                      <p>J. D. Salinger</p>
+                      <span class="rating">★ 4.2</span>
+                    </div>
+                    <button class="primary-button primary-button--compact" type="button">Reserve</button>
+                  </article>
+                </div>
+              </article>
+            </section>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
