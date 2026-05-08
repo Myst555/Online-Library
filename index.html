@@ -115,14 +115,14 @@
               <h1 id="login-title">Login to LibraryHub</h1>
               <p class="lead auth-lead">Enter your credentials to access your library account.</p>
 
-              <form class="auth-form">
+              <form class="auth-form" novalidate>
                 <label>
                   <span>Email</span>
-                  <input type="email" placeholder="your.email@example.com" />
+                  <input type="email" name="email" placeholder="your.email@example.com" />
                 </label>
                 <label>
                   <span>Password</span>
-                  <input type="password" placeholder="Enter your password" />
+                  <input type="password" name="password" placeholder="Enter your password" />
                 </label>
 
                 <div class="auth-meta">
@@ -133,7 +133,9 @@
                   <button class="link-button" type="button">Forgot password?</button>
                 </div>
 
-                <button class="primary-button primary-button--full" type="button" data-view-target="dashboard">
+                <div class="form-message" role="status" aria-live="polite" hidden></div>
+
+                <button class="primary-button primary-button--full" type="submit">
                   Sign In
                 </button>
               </form>
